@@ -22,7 +22,7 @@ import com.wax.newsapp.ui.NewsViewModel
 import com.wax.newsapp.util.Constants
 import com.wax.newsapp.util.Resource
 
-class HeadlinesFragment : Fragment() {
+class HeadlinesFragment : Fragment(R.layout.fragment_headlines) {
 
     lateinit var newsViewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
@@ -93,12 +93,12 @@ class HeadlinesFragment : Fragment() {
     var isScrolling = false
 
     private fun hideProgressbar() {
-        binding.pagnationProgressBar.visibility = View.INVISIBLE
+        binding.paginationProgressBar.visibility = View.INVISIBLE
         isLoading = false
     }
 
     private fun showProgressBar() {
-        binding.pagnationProgressBar.visibility = View.VISIBLE
+        binding.paginationProgressBar.visibility = View.VISIBLE
         isLoading = true
     }
 

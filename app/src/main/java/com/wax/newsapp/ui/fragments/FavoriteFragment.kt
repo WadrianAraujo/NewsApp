@@ -19,7 +19,7 @@ import com.wax.newsapp.databinding.FragmentFavoriteBinding
 import com.wax.newsapp.ui.NewsActivity
 import com.wax.newsapp.ui.NewsViewModel
 
-class FavoriteFragment : Fragment() {
+class FavoriteFragment : Fragment(R.layout.fragment_favorite) {
 
     lateinit var newsViewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
