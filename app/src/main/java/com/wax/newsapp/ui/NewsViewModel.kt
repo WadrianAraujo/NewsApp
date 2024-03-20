@@ -28,9 +28,10 @@ class NewsViewModel(app: Application, val newsRepository: NewsRepository) : Andr
     var oldSearchQuery: String? = null
 
     init {
-        getHeadLines("br")
+        getHeadLines("us")
     }
-    fun getHeadLines(countryCode: String) =viewModelScope.launch {
+
+    fun getHeadLines(countryCode: String) = viewModelScope.launch {
         headlinesInternet(countryCode)
     }
 
